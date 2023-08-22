@@ -1,0 +1,19 @@
+/* login_style_d24.css */
+.background {
+    -fx-background-color: #2C3A47;
+}
+.text_fields{
+    -fx-background-color:  #95a5a6;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-text-fill: #f5f6fa;
+    -fx-prompt-text-fill: #f5f6fa;
+}
+.login_btn{
+    -fx-background-color: #3498db;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+.login_btn:hover{
+    -fx-background-color: #44bd32;
+}

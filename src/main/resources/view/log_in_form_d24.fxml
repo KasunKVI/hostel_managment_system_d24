@@ -12,7 +12,7 @@
    <children>
       <ImageView blendMode="LIGHTEN" fitHeight="204.0" fitWidth="215.0" layoutX="279.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../home/kaviyakv/Desktop/Orange%20Dark%20Blue%20Modern%20Elegant%20Letter%20D%20Logo%20(1).gif" />
+            <Image url="@../image/Orange%20Dark%20Blue%20Modern%20Elegant%20Letter%20D%20Logo%20(1).gif" />
          </image>
       </ImageView>
       <Label layoutX="231.0" layoutY="220.0" prefHeight="74.0" prefWidth="293.0" text="Welcome To D24 !" textFill="#cdcdcd">
@@ -25,24 +25,24 @@
             <Font name="Comic Sans MS" size="19.0" />
          </font>
       </Label>
-      <TextField layoutX="205.0" layoutY="397.0" prefHeight="49.0" prefWidth="384.0" promptText="User Name" styleClass="text_fields">
+      <TextField layoutX="176.0" layoutY="397.0" prefHeight="49.0" prefWidth="384.0" promptText="User Name" styleClass="text_fields">
          <font>
             <Font name="Liberation Serif Bold" size="19.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="477.0" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields">
+      <TextField layoutX="177.0" layoutY="477.0" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields">
          <font>
             <Font name="Liberation Serif Bold" size="19.0" />
          </font>
       </TextField>
-      <Button fx:id="btn_logIn" layoutX="207.0" layoutY="570.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="384.0" styleClass="login_btn" text="LogIn" textFill="#ffeaea">
+      <Button fx:id="btn_logIn" layoutX="174.0" layoutY="570.0" mnemonicParsing="false" onAction="#login_to_the_system" prefHeight="49.0" prefWidth="384.0" styleClass="login_btn" text="LogIn" textFill="#ffeaea">
          <font>
             <Font name="Dyuthi Regular" size="21.0" />
          </font>
       </Button>
-      <Label layoutX="333.0" layoutY="643.0" onMouseClicked="#show_forget_password_page" prefHeight="30.0" prefWidth="147.0" text="Forget Password" textFill="#317994">
+      <Label layoutX="293.0" layoutY="643.0" onMouseClicked="#show_forget_password_page" prefHeight="30.0" prefWidth="147.0" text="Forget Password" textFill="#8f3232">
          <font>
-            <Font size="16.0" />
+            <Font name="DejaVu Sans Mono Bold" size="15.0" />
          </font>
       </Label>
    </children>
