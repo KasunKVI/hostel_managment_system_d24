@@ -1,0 +1,14 @@
+
+.contentPane{
+    -fx-background-color: #2C3A47;
+}
+.about , .midPane{
+    -fx-background-color: #1c1c19;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+.room_label{
+    -fx-border-color: #ffd32a;
+    -fx-border-radius: 20px;
+    -fx-alignment: center;
+}
