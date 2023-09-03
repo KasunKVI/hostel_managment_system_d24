@@ -1,0 +1,22 @@
+.contentPane{
+    -fx-background-color: #2C3A47;
+}
+.aboutPaymentPane , .tagsPane , .midPane{
+    -fx-background-color: #1c1c19;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+.monthlyBtn {
+    -fx-background-color: #2C3A47;
+    -fx-text-fill: #ffd32a;
+    -fx-border-color: #ffd32a;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+}
+.keyMoneyBtn{
+    -fx-background-color: #2C3A47;
+    -fx-text-fill: #d35400;
+    -fx-border-color: #d35400;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+}
