@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="back_pane1" prefHeight="656.0" prefWidth="752.0" styleClass="contentPane" stylesheets="@../css/payment_dashboard_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentControllerClass">
+    <children>
+        <AnchorPane layoutX="36.0" layoutY="301.0" prefHeight="312.0" prefWidth="683.0" styleClass="midPane" />
+        <AnchorPane layoutX="417.0" layoutY="33.0" prefHeight="239.0" prefWidth="287.0" styleClass="aboutPaymentPane" />
+        <Button fx:id="btnKeyMoney" layoutX="76.0" layoutY="58.0" mnemonicParsing="false" onAction="#load_keymoney_page" prefHeight="59.0" prefWidth="208.0" styleClass="keyMoneyBtn" text="Key Money">
+            <font>
+                <Font name="Lohit Odia" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="78.0" layoutY="166.0" mnemonicParsing="false" onAction="#load_monthly_payment_page" prefHeight="59.0" prefWidth="208.0" styleClass="monthlyBtn" text="Monthly Payment">
+            <font>
+                <Font name="Lohit Odia" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
