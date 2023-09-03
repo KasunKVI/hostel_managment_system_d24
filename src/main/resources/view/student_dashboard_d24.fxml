@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="back_pane1" prefHeight="656.0" prefWidth="752.0" styleClass="contentPane" stylesheets="@../css/student_dashboard_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegistrationController">
+   <children>
+      <Button layoutX="514.0" layoutY="103.0" mnemonicParsing="false" onAction="#load_remove_student_form" prefHeight="59.0" prefWidth="208.0" styleClass="removeBtn" text="Remove Student">
+         <font>
+            <Font name="Lohit Odia" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="513.0" layoutY="25.0" mnemonicParsing="false" onAction="#load_student_add_form" prefHeight="59.0" prefWidth="208.0" styleClass="addBtn" text="+Add Student">
+         <font>
+            <Font name="Lohit Odia" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="513.0" layoutY="200.0" prefHeight="426.0" prefWidth="208.0" styleClass="newStudentsPane" />
+      <AnchorPane layoutX="37.0" layoutY="33.0" prefHeight="181.0" prefWidth="435.0" styleClass="tagsPane" />
+      <AnchorPane layoutX="36.0" layoutY="243.0" prefHeight="370.0" prefWidth="435.0" styleClass="midPane" />
+   </children>
+</AnchorPane>
