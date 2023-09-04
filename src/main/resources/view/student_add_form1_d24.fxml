@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="back_pane" prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/student_add_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegistrationController">
+   <children>
+      <Label layoutX="25.0" layoutY="23.0" prefHeight="55.0" prefWidth="228.0" text="Add Student" textFill="#fffdfd">
+         <font>
+            <Font name="DejaVu Sans Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField layoutX="35.0" layoutY="129.0" prefHeight="47.0" prefWidth="285.0" promptText="Name Of Student" styleClass="txt1">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <RadioButton layoutX="427.0" layoutY="188.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="69.0" styleClass="gender" text="Male" />
+      <RadioButton layoutX="426.0" layoutY="246.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="82.0" styleClass="gender" text="Female" />
+      <Label alignment="CENTER" layoutX="364.0" layoutY="121.0" prefHeight="47.0" prefWidth="151.0" styleClass="gender" text="Gender" />
+      <TextField layoutX="39.0" layoutY="216.0" prefHeight="47.0" prefWidth="285.0" promptText="Contact Number" styleClass="txt1">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="39.0" layoutY="305.0" prefHeight="47.0" prefWidth="285.0" promptText="Email Address" styleClass="txt1">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="39.0" layoutY="383.0" prefHeight="55.0" prefWidth="228.0" text="Residential Details" textFill="#fffdfd">
+         <font>
+            <Font name="DejaVu Sans Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField layoutX="39.0" layoutY="455.0" prefHeight="47.0" prefWidth="285.0" promptText="Address" styleClass="txt1">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="39.0" layoutY="526.0" prefHeight="47.0" prefWidth="158.0" promptText="District" styleClass="txt1">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="291.0" layoutY="526.0" prefHeight="47.0" prefWidth="173.0" promptText="Province" styleClass="txt1">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnPrc1" layoutX="318.0" layoutY="610.0" mnemonicParsing="false" onAction="#load_second_form" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Proceed">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="86.0" layoutY="612.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" styleClass="close_btn" text="Close">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
