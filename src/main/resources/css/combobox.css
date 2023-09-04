@@ -15,7 +15,9 @@
 ;
 }
 .arrow-button {
+
     -fx-background-color: white;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: right center; /* Adjust the position as needed */
+    -fx-background-position: right center;
+
 }
