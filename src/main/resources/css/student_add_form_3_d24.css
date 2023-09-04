@@ -1,0 +1,24 @@
+.background{
+    -fx-background-color: #2C3A47;
+}
+.gender{
+    -fx-background-color: #2d3436;
+    -fx-background-radius: 10px;
+    -fx-font-family: "DejaVu Serif";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #ffffff;
+}
+.close_btn{
+    -fx-background-color: #2C3A47;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-border-radius: 10px;
+}
+.proceed_btn{
+    -fx-background-color:#32ff7e;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 10px;
+}
