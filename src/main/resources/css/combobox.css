@@ -1,18 +1,11 @@
 {
-    -fx-background-color: #2d3436
-;
-    -fx-background-radius: 10px
-;
-    -fx-font-family: "DejaVu Serif"
-;
-    -fx-font-weight: bold
-;
-    -fx-font-size: 13px
-;
-    -fx-text-fill: #ffffff
-;
-    -fx-prompt-text-fill: #ffffff
-;
+    -fx-background-color: #2d3436;
+    -fx-background-radius: 10px;
+    -fx-font-family: "DejaVu Serif";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #ffffff;
 }
 .arrow-button {
 
