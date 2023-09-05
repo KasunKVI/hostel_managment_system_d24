@@ -5,17 +5,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="back_pane" prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/student_add_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegistrationController">
     <children>
-        <TextField layoutX="259.0" layoutY="136.0" prefHeight="47.0" prefWidth="291.0" promptText="Name Of Institute / Campus" styleClass="txt1">
+        <TextField fx:id="txtUniName" layoutX="259.0" layoutY="136.0" prefHeight="47.0" prefWidth="291.0" promptText="Name Of Institute / Campus" styleClass="txt1">
             <font>
                 <Font name="DejaVu Serif Bold" size="13.0" />
             </font>
         </TextField>
-        <TextField layoutX="39.0" layoutY="216.0" prefHeight="47.0" prefWidth="285.0" promptText="Contact Number" styleClass="txt1">
+        <TextField fx:id="txtUniContact" layoutX="39.0" layoutY="216.0" prefHeight="47.0" prefWidth="285.0" promptText="Contact Number" styleClass="txt1">
             <font>
                 <Font name="DejaVu Serif Bold" size="13.0" />
             </font>
@@ -25,7 +26,7 @@
                 <Font name="DejaVu Sans Bold" size="21.0" />
             </font>
         </Label>
-        <TextField layoutX="43.0" layoutY="436.0" prefHeight="47.0" prefWidth="167.0" promptText="Duration" styleClass="txt1">
+        <TextField fx:id="txtDuration" layoutX="321.0" layoutY="541.0" prefHeight="47.0" prefWidth="167.0" promptText="Duration" styleClass="txt1">
             <font>
                 <Font name="DejaVu Serif Bold" size="13.0" />
             </font>
@@ -45,15 +46,28 @@
             <Font name="DejaVu Sans Bold" size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="39.0" layoutY="138.0" prefHeight="47.0" prefWidth="188.0" promptText="Student ID" styleClass="txt1">
+      <TextField fx:id="txtS_Id" layoutX="39.0" layoutY="138.0" prefHeight="47.0" prefWidth="188.0" promptText="Student ID" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
       </TextField>
-      <ComboBox layoutX="39.0" layoutY="370.0" prefHeight="39.0" prefWidth="228.0" promptText="Room Type" stylesheets="@../css/combobox.css" />
-      <ComboBox layoutX="252.0" layoutY="444.0" prefHeight="39.0" prefWidth="173.0" promptText="Type" stylesheets="@../css/combobox.css" />
-      <RadioButton layoutX="248.0" layoutY="528.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="69.0" styleClass="gender" text="Now" />
-      <RadioButton layoutX="364.0" layoutY="528.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="82.0" styleClass="gender" text="Later" />
-      <Label alignment="CENTER" layoutX="43.0" layoutY="522.0" prefHeight="47.0" prefWidth="151.0" styleClass="gender" text="KeyMoney" />
+      <ComboBox fx:id="cmbRoomType" layoutX="39.0" layoutY="370.0" prefHeight="47.0" prefWidth="228.0" promptText="Room Type" stylesheets="@../css/combobox.css" />
+      <ComboBox fx:id="cmbDuration" layoutX="47.0" layoutY="547.0" prefHeight="47.0" prefWidth="173.0" promptText="Time Frame" stylesheets="@../css/combobox.css" />
+      <RadioButton fx:id="rbtnNow" layoutX="52.0" layoutY="493.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="69.0" styleClass="gender" text="Now">
+         <toggleGroup>
+            <ToggleGroup fx:id="keyMoneyTime" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rbtnLater" layoutX="141.0" layoutY="493.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="82.0" styleClass="gender" text="Later" toggleGroup="$keyMoneyTime" />
+      <Label alignment="CENTER" layoutX="48.0" layoutY="429.0" prefHeight="47.0" prefWidth="151.0" styleClass="gender" text="KeyMoney" />
+      <TextField fx:id="txtRoomNo" layoutX="322.0" layoutY="370.0" prefHeight="47.0" prefWidth="167.0" promptText="Duration" styleClass="txt1" text="Room No">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtQty" layoutX="322.0" layoutY="439.0" prefHeight="47.0" prefWidth="167.0" promptText="Duration" styleClass="txt1" text="Qty">
+         <font>
+            <Font name="DejaVu Serif Bold" size="13.0" />
+         </font>
+      </TextField>
     </children>
 </AnchorPane>
