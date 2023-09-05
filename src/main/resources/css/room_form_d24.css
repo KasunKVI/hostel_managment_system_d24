@@ -1,0 +1,31 @@
+.sidePane{
+    -fx-background-color: #1c1c19;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.backgroundPane{
+    -fx-background-color: #2C3A47;
+}
+
+.contentPane{
+    -fx-background-color: #2C3A47;
+}
+.btn1 , .btn2 , .btn3{
+    -fx-background-color:#1c1c19 ;
+    -fx-text-fill: #dfe6e9;
+}
+.btn1:hover , .btn3:hover{
+    -fx-background-color: #2C3A47;
+    -fx-text-fill: #2ecc71;
+    -fx-background-radius: 15px 0 0 15px ;
+}
+.btn2:hover{
+    -fx-background-color: #2C3A47;
+    -fx-text-fill: #2ecc71;
+    -fx-background-radius: 0 15px 15px 0 ;
+}
+.room_payments , .rooms_left, .reserved_rooms{
+    -fx-background-color: #1c1c19;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
