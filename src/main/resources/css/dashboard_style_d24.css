@@ -24,6 +24,15 @@
     -fx-text-fill: #2ecc71;
     -fx-background-radius: 0 15px 15px 0 ;
 }
+.btn1:pressed, .btn3:pressed {
+    -fx-background-color: #2ecc71; /* Change background color on click */
+    -fx-text-fill: #2C3A47; /* Change text color on click */
+}
+
+.btn2:pressed {
+    -fx-background-color: #2ecc71; /* Change background color on click */
+    -fx-text-fill: #2C3A47; /* Change text color on click */
+}
 .capacityPane , .studentUpdatePane, .detailsPane{
     -fx-background-color: #1c1c19;
     -fx-border-radius: 25px;
@@ -35,4 +44,8 @@
     -fx-text-fill: #1abc9c;
     -fx-border-radius: 12px;
     -fx-border-width: 2px;
+}
+.current_capacity_pane,.pie_chart_pane{
+    -fx-background-radius: 20px;
+    -fx-background-color: 	#030303;
 }
