@@ -20,3 +20,7 @@
     -fx-border-radius: 12px;
     -fx-border-width: 2px;
 }
+.payment_chart, .about_pane{
+    -fx-background-radius: 20px;
+    -fx-background-color: 	#030303;
+}
