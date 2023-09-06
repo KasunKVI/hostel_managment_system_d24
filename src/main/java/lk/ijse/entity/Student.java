@@ -27,7 +27,7 @@ public class Student {
     private String university;
     private String email;
 
-    @OneToMany (mappedBy = "student" , cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @OneToMany (mappedBy = "student" , cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Reservation> reservation;
 
 }
