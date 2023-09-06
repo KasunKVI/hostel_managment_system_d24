@@ -1,0 +1,27 @@
+.addBtn{
+    -fx-background-color: #2C3A47;
+    -fx-border-color: #4cd137;
+    -fx-text-fill: #4cd137;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+}
+.removeBtn{
+    -fx-background-color: #2C3A47;
+    -fx-border-color: #d63031;
+    -fx-text-fill: #d63031;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+}
+.contentPane{
+    -fx-background-color: #2C3A47;
+}
+.newStudentsPane , .tagsPane , .midPane{
+    -fx-background-color: #1c1c19;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+.s_counts_pane, .student_box{
+    -fx-background-radius: 20px;
+    -fx-background-color: 	#030303;
+    -fx-border-radius: 20px;
+}
