@@ -1,0 +1,21 @@
+/* Define a custom ProgressBar style */
+ {
+    -fx-background-color: linear-gradient(to bottom, #5c92e8, #3a5dbb);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5;
+    -fx-padding: 3;
+}
+
+/* Customize the ProgressBar's track color */
+.track {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+/* Customize the ProgressBar's bar color */
+ .bar {
+    -fx-background-color: linear-gradient(to bottom, #7fd13b, #5bc72d);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5;
+}

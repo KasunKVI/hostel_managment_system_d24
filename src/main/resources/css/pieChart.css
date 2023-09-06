@@ -1,0 +1,34 @@
+/* Pie Chart CSS */
+
+
+/* Legend Labels */
+.chart-legend-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666;
+}
+
+/* Pie Slice Colors */
+{
+    -fx-border-color: #000000; /* Pie Slice Border Color */
+    -fx-border-width: 2px; /* Pie Slice Border Width */
+}
+
+.chart-pie-color-0 { -fx-pie-color: #E57373; }
+.chart-pie-color-1 { -fx-pie-color: #81C784; }
+.chart-pie-color-2 { -fx-pie-color: #64B5F6; }
+.chart-pie-color-3 { -fx-pie-color: #FFD54F; }
+
+
+/* Hover Effect for Pie Slices */
+:hover {
+    -fx-border-width: 3px; /* Increase border width on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Add drop shadow on hover */
+
+}
+
+/* Animation for Pie Slices */
+:pressed {
+    -fx-scale-x: 1.05; /* Scale up on click */
+    -fx-scale-y: 1.05;
+}
