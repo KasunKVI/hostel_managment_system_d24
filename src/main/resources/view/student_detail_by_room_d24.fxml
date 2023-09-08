@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/student_details_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RoomFormsController">
     <children>
-        <Button layoutX="206.0" layoutY="601.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Ok">
+        <Button fx:id="btnOk" layoutX="206.0" layoutY="601.0" mnemonicParsing="false" onAction="#okBtnOnAction" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Ok">
             <font>
                 <Font name="Comic Sans MS Bold" size="16.0" />
             </font>

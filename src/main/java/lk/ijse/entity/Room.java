@@ -21,7 +21,7 @@ public class Room {
     private String key_money;
     private Integer qty;
 
-    @OneToMany (mappedBy = "room" , cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany (mappedBy = "room" , cascade = CascadeType.ALL, targetEntity = Reservation.class)
     private List<Reservation> reservations;
 
 
