@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/student_details_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegistrationController">
+<AnchorPane prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/student_details_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RoomFormsController">
     <children>
         <Button layoutX="206.0" layoutY="601.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Ok">
             <font>
@@ -17,15 +17,14 @@
                 <Font name="DejaVu Sans Bold" size="28.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="199.0" layoutY="128.0" prefHeight="47.0" prefWidth="324.0" styleClass="gender" text="Student Name" />
-        <Label alignment="CENTER" layoutX="21.0" layoutY="257.0" prefHeight="47.0" prefWidth="227.0" styleClass="gender" text="Contact" />
-        <Label alignment="CENTER" layoutX="33.0" layoutY="501.0" prefHeight="47.0" prefWidth="238.0" styleClass="gender" text="Room Type" />
-        <Label alignment="CENTER" layoutX="338.0" layoutY="501.0" prefHeight="47.0" prefWidth="174.0" styleClass="gender" text="Room No" />
-        <Label alignment="CENTER" layoutX="21.0" layoutY="193.0" prefHeight="47.0" prefWidth="497.0" styleClass="gender" text="Address" />
-        <Label alignment="CENTER" layoutX="23.0" layoutY="327.0" prefHeight="47.0" prefWidth="303.0" styleClass="gender" text="Email" />
-      <Label alignment="CENTER" layoutX="21.0" layoutY="128.0" prefHeight="47.0" prefWidth="174.0" styleClass="gender" text="Student ID" />
-      <Label alignment="CENTER" layoutX="292.0" layoutY="265.0" prefHeight="47.0" prefWidth="227.0" styleClass="gender" text="District" />
-      <Label alignment="CENTER" layoutX="23.0" layoutY="401.0" prefHeight="47.0" prefWidth="490.0" styleClass="gender" text="University" />
-      <Label alignment="CENTER" layoutX="368.0" layoutY="328.0" prefHeight="47.0" prefWidth="149.0" styleClass="gender" text="Gender" />
+        <Label fx:id="lblStudentName" alignment="CENTER" layoutX="199.0" layoutY="128.0" prefHeight="47.0" prefWidth="324.0" styleClass="gender" text="Student Name" />
+        <Label fx:id="lblContact" alignment="CENTER" layoutX="21.0" layoutY="257.0" prefHeight="47.0" prefWidth="227.0" styleClass="gender" text="Contact" />
+        <Label fx:id="lblRoomType" alignment="CENTER" layoutX="33.0" layoutY="501.0" prefHeight="47.0" prefWidth="238.0" styleClass="gender" text="Room Type" />
+        <Label fx:id="lblRoomNo" alignment="CENTER" layoutX="338.0" layoutY="501.0" prefHeight="47.0" prefWidth="174.0" styleClass="gender" text="Room No" />
+        <Label fx:id="lblAddress" alignment="CENTER" layoutX="21.0" layoutY="193.0" prefHeight="47.0" prefWidth="497.0" styleClass="gender" text="Address" />
+        <Label fx:id="lblEmail" alignment="CENTER" layoutX="23.0" layoutY="327.0" prefHeight="47.0" prefWidth="490.0" styleClass="gender" text="Email" />
+      <Label fx:id="lblStudentID" alignment="CENTER" layoutX="21.0" layoutY="128.0" prefHeight="47.0" prefWidth="174.0" styleClass="gender" text="Student ID" />
+      <Label fx:id="lblUniversity" alignment="CENTER" layoutX="23.0" layoutY="401.0" prefHeight="47.0" prefWidth="490.0" styleClass="gender" text="University" />
+      <Label fx:id="lblGender" alignment="CENTER" layoutX="329.0" layoutY="257.0" prefHeight="47.0" prefWidth="189.0" styleClass="gender" text="Gender" />
     </children>
 </AnchorPane>

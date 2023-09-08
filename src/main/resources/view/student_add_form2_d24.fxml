@@ -59,12 +59,12 @@
          </toggleGroup></RadioButton>
       <RadioButton fx:id="rbtnLater" layoutX="141.0" layoutY="493.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="82.0" styleClass="gender" text="Later" toggleGroup="$keyMoneyTime" />
       <Label alignment="CENTER" layoutX="48.0" layoutY="429.0" prefHeight="47.0" prefWidth="151.0" styleClass="gender" text="KeyMoney" />
-      <TextField fx:id="txtRoomNo" layoutX="322.0" layoutY="370.0" prefHeight="47.0" prefWidth="167.0" promptText="Duration" styleClass="txt1" text="Room No">
+      <TextField fx:id="txtRoomNo" layoutX="322.0" layoutY="370.0" prefHeight="47.0" prefWidth="167.0" promptText="Room No" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtQty" layoutX="322.0" layoutY="439.0" prefHeight="47.0" prefWidth="167.0" promptText="Duration" styleClass="txt1" text="Qty">
+      <TextField fx:id="txtQty" layoutX="322.0" layoutY="439.0" prefHeight="47.0" prefWidth="167.0" promptText="Qty" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>

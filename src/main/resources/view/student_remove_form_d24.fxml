@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/studnet_remove_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegistrationController">
     <children>
-        <Button layoutX="318.0" layoutY="610.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Remove">
+        <Button layoutX="318.0" layoutY="610.0" mnemonicParsing="false" onAction="#removeStudent" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Remove">
             <font>
                 <Font name="Comic Sans MS Bold" size="16.0" />
             </font>
@@ -25,21 +25,20 @@
                 <Font name="DejaVu Sans Bold" size="28.0" />
             </font>
         </Label>
-        <TextField alignment="CENTER" layoutX="43.0" layoutY="103.0" prefHeight="47.0" prefWidth="438.0" promptText="Student ID" styleClass="txt1">
+        <TextField fx:id="txtSidSearch" alignment="CENTER" layoutX="43.0" layoutY="103.0" onAction="#loadStudentDetails" prefHeight="47.0" prefWidth="438.0" promptText="Student ID" styleClass="txt1">
             <font>
                 <Font name="DejaVu Serif Bold" size="13.0" />
             </font>
         </TextField>
-        <Label alignment="CENTER" layoutX="43.0" layoutY="223.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Student Name" />
+        <Label fx:id="lblSNameS" alignment="CENTER" layoutX="43.0" layoutY="223.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Student Name" />
       <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="55.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/icons8-search-64.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="43.0" layoutY="291.0" prefHeight="47.0" prefWidth="227.0" styleClass="gender" text="Contact" />
-      <Label alignment="CENTER" layoutX="33.0" layoutY="501.0" prefHeight="47.0" prefWidth="238.0" styleClass="gender" text="Room Type" />
-      <Label alignment="CENTER" layoutX="318.0" layoutY="501.0" prefHeight="47.0" prefWidth="174.0" styleClass="gender" text="Room No" />
-      <Label alignment="CENTER" layoutX="43.0" layoutY="368.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Address" />
-      <Label alignment="CENTER" layoutX="43.0" layoutY="432.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Email" />
+      <Label fx:id="lblSContactS" alignment="CENTER" layoutX="45.0" layoutY="291.0" prefHeight="47.0" prefWidth="227.0" styleClass="gender" text="Contact" />
+      <Label fx:id="lblSAddressS" alignment="CENTER" layoutX="43.0" layoutY="367.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Address" />
+      <Label fx:id="lblSEmailS" alignment="CENTER" layoutX="43.0" layoutY="439.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Email" />
+      <Label fx:id="lblRoomId" alignment="CENTER" layoutX="43.0" layoutY="506.0" prefHeight="47.0" prefWidth="419.0" styleClass="gender" text="Room ID" />
     </children>
 </AnchorPane>

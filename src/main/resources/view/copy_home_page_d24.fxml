@@ -20,7 +20,7 @@
                         <Font name="Comic Sans MS" size="15.0" />
                      </font>
                   </Label>
-                  <ProgressBar fx:id="student_capacity" layoutX="13.0" layoutY="83.0" prefHeight="24.0" prefWidth="215.0" progress="0.0" />
+                  <ProgressBar fx:id="student_capacity" layoutX="13.0" layoutY="83.0" prefHeight="24.0" prefWidth="215.0" progress="0.0" stylesheets="@../css/progressbar.css" />
                </children>
             </AnchorPane>
          </children></AnchorPane>
@@ -28,7 +28,7 @@
          <children>
             <AnchorPane layoutX="18.0" layoutY="25.0" prefHeight="341.0" prefWidth="320.0" styleClass="pie_chart_pane">
                <children>
-                  <PieChart fx:id="rooms_received_with_types" layoutX="42.0" layoutY="42.0" prefHeight="260.0" prefWidth="246.0" />
+                  <PieChart fx:id="rooms_received_with_types" layoutX="42.0" layoutY="42.0" prefHeight="260.0" prefWidth="246.0" stylesheets="@../css/pieChart.css" title="Room Reserved" />
                </children>
             </AnchorPane>
          </children></AnchorPane>

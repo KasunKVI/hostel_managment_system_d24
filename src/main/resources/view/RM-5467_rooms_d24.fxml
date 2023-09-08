@@ -10,7 +10,7 @@
         <AnchorPane layoutX="41.0" layoutY="529.0" prefHeight="97.0" prefWidth="680.0" styleClass="about" />
         <AnchorPane layoutX="34.0" layoutY="43.0" prefHeight="455.0" prefWidth="680.0" styleClass="midPane">
             <children>
-                <Label alignment="CENTER" layoutX="36.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room1" textFill="WHITE">
+                <Label fx:id="RM_54671" alignment="CENTER" layoutX="36.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room1" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -18,7 +18,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="182.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room7" textFill="WHITE">
+                <Label fx:id="RM_54677" layoutX="182.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room7" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -26,7 +26,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="36.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room6" textFill="WHITE">
+                <Label fx:id="RM_54676" layoutX="36.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room6" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -34,7 +34,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="579.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room5" textFill="WHITE">
+                <Label fx:id="RM_54675" layoutX="579.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room5" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -42,7 +42,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="444.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room4" textFill="WHITE">
+                <Label fx:id="RM_54674" layoutX="444.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room4" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -50,7 +50,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="315.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room3" textFill="WHITE">
+                <Label fx:id="RM_54673" layoutX="315.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room3" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -58,7 +58,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="182.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room2" textFill="WHITE">
+                <Label fx:id="RM_54672" layoutX="182.0" layoutY="47.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room2" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -66,7 +66,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="315.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room8" textFill="WHITE">
+                <Label fx:id="RM_54678" layoutX="315.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room8" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -74,7 +74,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="444.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room14" textFill="WHITE">
+                <Label fx:id="RM_546714" layoutX="444.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room14" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -82,7 +82,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="309.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room13" textFill="WHITE">
+                <Label fx:id="RM_546713" layoutX="309.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room13" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -90,7 +90,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="181.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room12" textFill="WHITE">
+                <Label fx:id="RM_546712" layoutX="181.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room12" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -98,7 +98,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="36.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room11" textFill="WHITE">
+                <Label fx:id="RM_546711" layoutX="36.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room11" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -106,7 +106,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="579.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room10" textFill="WHITE">
+                <Label fx:id="RM_546710" layoutX="579.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room10" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -114,7 +114,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="444.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room9" textFill="WHITE">
+                <Label fx:id="RM_54679" layoutX="444.0" layoutY="143.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room9" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -122,7 +122,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="579.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room15" textFill="WHITE">
+                <Label fx:id="RM_546715" layoutX="579.0" layoutY="249.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room15" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -130,7 +130,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="579.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room20" textFill="WHITE">
+                <Label fx:id="RM_546720" layoutX="579.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room20" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -138,7 +138,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="444.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room19" textFill="WHITE">
+                <Label fx:id="RM_546719" layoutX="444.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room19" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -146,7 +146,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="309.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room18" textFill="WHITE">
+                <Label fx:id="RM_546718" layoutX="309.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room18" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -154,7 +154,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="182.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room17" textFill="WHITE">
+                <Label fx:id="RM_546717" layoutX="182.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room17" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
@@ -162,7 +162,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Label>
-                <Label layoutX="36.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room16" textFill="WHITE">
+                <Label fx:id="RM_546716" layoutX="36.0" layoutY="345.0" onMouseClicked="#show_room_detail" prefHeight="41.0" prefWidth="63.0" styleClass="room_label" text="Room16" textFill="WHITE">
                     <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                     </font>
