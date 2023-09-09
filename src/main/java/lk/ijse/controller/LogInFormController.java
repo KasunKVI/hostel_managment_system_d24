@@ -287,7 +287,7 @@ public class LogInFormController {
         }
         boolean isCorrect = userBO.isExist(userDTO);
 
-        if (isCorrect) {
+        if (isCorrect && condition) {
             Stage stage = new Stage();
             primaryStage = (Stage) btn_logIn.getScene().getWindow();
             primaryStage.close();
@@ -412,5 +412,51 @@ public class LogInFormController {
             FontChanger.setTextBlack(txtInput1);
         }
 
+    }
+
+    public void validateUserName(KeyEvent keyEvent) {
+
+        if (!txtUserName.getText().matches(Regex.user())){
+            condition=false;
+            FontChanger.setTextColorRedLogIn(txtUserName);
+        }else {
+            condition=true;
+            FontChanger.setTextBlackLogIn(txtUserName);
+        }
+    }
+
+    public void validatePassword(KeyEvent keyEvent) {
+
+//        if (!txtPassword.getText().matches(Regex.password())){
+//            condition=false;
+//            FontChanger.setTextColorRedLogInPs(txtPassword);
+//        }else {
+//            condition=true;
+//            FontChanger.setTextBlackLogInPs(txtPassword);
+//        }
+
+    }
+
+    public void enterPass(ActionEvent actionEvent) {
+        txtPassword.requestFocus();
+    }
+
+    public void enteredPass(ActionEvent actionEvent) {
+        try {
+            login_to_the_system(actionEvent);
+        } catch (IOException | SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void checkPassValid(KeyEvent keyEvent) {
+
+        if (!txtVisiblePass.getText().matches(Regex.password())){
+            condition=false;
+            FontChanger.setTextColorRedLogIn(txtVisiblePass);
+        }else {
+            condition=true;
+            FontChanger.setTextBlackLogIn(txtVisiblePass);
+        }
     }
 }

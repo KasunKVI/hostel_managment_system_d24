@@ -27,7 +27,7 @@
             <Font name="Comic Sans MS" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="176.0" layoutY="397.0" prefHeight="49.0" prefWidth="384.0" promptText="User Name" styleClass="text_fields">
+      <TextField fx:id="txtUserName" layoutX="176.0" layoutY="397.0" onAction="#enterPass" onKeyReleased="#validateUserName" prefHeight="49.0" prefWidth="384.0" promptText="User Name" styleClass="text_fields">
          <font>
             <Font name="Liberation Serif Bold" size="19.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font name="DejaVu Sans Mono Bold" size="15.0" />
          </font>
       </Label>
-      <PasswordField fx:id="txtPassword" layoutX="174.0" layoutY="476.0" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields">
+      <PasswordField fx:id="txtPassword" layoutX="174.0" layoutY="476.0" onAction="#enteredPass" onKeyReleased="#validatePassword" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields">
          <font>
             <Font name="Liberation Serif" size="19.0" />
          </font>
@@ -53,7 +53,7 @@
          </image>
       </ImageView>
       <CheckBox fx:id="showPass" layoutX="568.0" layoutY="481.0" mnemonicParsing="false" onAction="#showPassword" opacity="0.0" prefHeight="40.0" prefWidth="23.0" text="CheckBox" />
-      <TextField fx:id="txtVisiblePass" layoutX="174.0" layoutY="476.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields" visible="false">
+      <TextField fx:id="txtVisiblePass" layoutX="174.0" layoutY="476.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#enteredPass" onKeyReleased="#checkPassValid" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields" visible="false">
          <font>
             <Font name="Liberation Serif Bold" size="19.0" />
          </font>
