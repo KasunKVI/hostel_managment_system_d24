@@ -47,12 +47,12 @@
             <Font name="Liberation Serif" size="19.0" />
          </font>
       </PasswordField>
-      <ImageView blendMode="MULTIPLY" fitHeight="49.0" fitWidth="55.0" layoutX="95.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="571.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../image/icons8-show.gif" />
+            <Image url="@../image/icons8-show-password-40.png" />
          </image>
       </ImageView>
-      <CheckBox fx:id="showPass" layoutX="101.0" layoutY="481.0" mnemonicParsing="false" onAction="#showPassword" opacity="0.0" prefHeight="40.0" prefWidth="23.0" text="CheckBox" />
+      <CheckBox fx:id="showPass" layoutX="568.0" layoutY="481.0" mnemonicParsing="false" onAction="#showPassword" opacity="0.0" prefHeight="40.0" prefWidth="23.0" text="CheckBox" />
       <TextField fx:id="txtVisiblePass" layoutX="174.0" layoutY="476.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields" visible="false">
          <font>
             <Font name="Liberation Serif Bold" size="19.0" />
