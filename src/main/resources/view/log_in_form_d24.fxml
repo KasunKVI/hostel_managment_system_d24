@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -25,12 +27,7 @@
             <Font name="Comic Sans MS" size="19.0" />
          </font>
       </Label>
-      <TextField layoutX="176.0" layoutY="397.0" prefHeight="49.0" prefWidth="384.0" promptText="User Name" styleClass="text_fields">
-         <font>
-            <Font name="Liberation Serif Bold" size="19.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="177.0" layoutY="477.0" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields">
+      <TextField fx:id="txtUserName" layoutX="176.0" layoutY="397.0" prefHeight="49.0" prefWidth="384.0" promptText="User Name" styleClass="text_fields">
          <font>
             <Font name="Liberation Serif Bold" size="19.0" />
          </font>
@@ -45,5 +42,21 @@
             <Font name="DejaVu Sans Mono Bold" size="15.0" />
          </font>
       </Label>
+      <PasswordField fx:id="txtPassword" layoutX="174.0" layoutY="476.0" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields">
+         <font>
+            <Font name="Liberation Serif" size="19.0" />
+         </font>
+      </PasswordField>
+      <ImageView blendMode="MULTIPLY" fitHeight="49.0" fitWidth="55.0" layoutX="95.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icons8-show.gif" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="showPass" layoutX="101.0" layoutY="481.0" mnemonicParsing="false" onAction="#showPassword" opacity="0.0" prefHeight="40.0" prefWidth="23.0" text="CheckBox" />
+      <TextField fx:id="txtVisiblePass" layoutX="174.0" layoutY="476.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="49.0" prefWidth="384.0" promptText="Password" styleClass="text_fields" visible="false">
+         <font>
+            <Font name="Liberation Serif Bold" size="19.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
