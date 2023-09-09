@@ -24,11 +24,11 @@ public class DTOtoEntity {
         }
 
         public UserDTO toUserDto(User entity) {
-            return new UserDTO(entity.getId(), entity.getEmail(),entity.getPassword(), entity.getUser_name());
+            return new UserDTO( entity.getUser_name(), entity.getPassword(), entity.getEmail());
         }
 
         public User toUserEntity(UserDTO dto) {
-            return new User(dto.getId(),dto.getEmail(), dto.getPassword(), dto.getUser_name() );
+            return new User( dto.getUser_name(), dto.getPassword(), dto.getEmail());
         }
 
         public StudentDTO toStudentDto(Student student) {
@@ -55,7 +55,6 @@ public class DTOtoEntity {
             studentEntity.setAddress(dto.getAddress());
             studentEntity.setEmail(dto.getEmail());
             studentEntity.setUniversity(dto.getUniversity());
-//            studentEntity.setReservation(convertDTOToEntity(dto.getReservations()));
             return studentEntity;
         }
 
