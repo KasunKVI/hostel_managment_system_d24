@@ -26,10 +26,13 @@
                <font>
                   <Font name="Yrsa Medium" size="17.0" />
                </font></Button>
-            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="59.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="59.0" layoutY="419.0" onMouseClicked="#changePassword" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/icons8-setting-643.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="54.0" fitWidth="53.0" layoutX="57.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
                <image>

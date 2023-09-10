@@ -18,6 +18,7 @@ import java.util.List;
 public class Student {
 
     @Id
+
     private String student_id;
     private String name;
     private String address;
@@ -27,7 +28,7 @@ public class Student {
     private String university;
     private String email;
 
-    @OneToMany (mappedBy = "student" , cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany (mappedBy = "student" , cascade = CascadeType.ALL, targetEntity = Reservation.class)
     private List<Reservation> reservation;
 
 }

@@ -8,8 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -26,6 +26,8 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class RoomFormsController implements Initializable {
@@ -216,6 +218,8 @@ public class RoomFormsController implements Initializable {
     private Label lblUniversity;
     @FXML
     private Button btnOk;
+    @FXML
+    private ImageView imglogOut;
     private static String roomId ="";
 
 
@@ -285,6 +289,7 @@ public class RoomFormsController implements Initializable {
 
         if (number==0) {
             loadTimeAndDate();
+            setRoomAvailability1324();
         }
         if(number==4){
             setRoomAvailability0093();
@@ -307,24 +312,78 @@ public class RoomFormsController implements Initializable {
 
         try {
 
-            String s_id = reservationBO.getStudentId(roomId);
-            StudentDTO studentDTO = studentBO.viewStudent(s_id);
+            List<String> s_id = reservationBO.getStudentId(roomId);
 
-            // Get the first part (first 7 characters)
-            String roomType = roomId.substring(0, 7);
+            int count = s_id.size();
+            System.out.println(count);
 
-            // Get the second part (remaining characters)
-            String roomNo = roomId.substring(7);
+            if (s_id.size()==2){
 
-            lblStudentID.setText(studentDTO.getStudent_id());
-            lblStudentName.setText(studentDTO.getName());
-            lblAddress.setText(studentDTO.getAddress());
-            lblContact.setText(studentDTO.getContact_no());
-            lblGender.setText(studentDTO.getGender());
-            lblEmail.setText(studentDTO.getEmail());
-            lblUniversity.setText(studentDTO.getUniversity());
-            lblRoomType.setText(roomType);
-            lblRoomNo.setText(roomNo);
+                ButtonType manage = new ButtonType("Student1", ButtonBar.ButtonData.YES);
+                ButtonType bill = new ButtonType("Student2", ButtonBar.ButtonData.YES);
+
+                Optional<ButtonType> result = new Alert(Alert.AlertType.INFORMATION, "This room has two students. Select the student you want to see", manage, bill).showAndWait();
+
+                if (result.orElse(null)==bill) {
+                    StudentDTO studentDTO = studentBO.viewStudent(s_id.get(0));
+
+                    //Get the first part (first 7 characters)
+                    String roomType = roomId.substring(0, 7);
+
+                    // Get the second part (remaining characters)
+                    String roomNo = roomId.substring(7);
+
+                    lblStudentID.setText(studentDTO.getStudent_id());
+                    lblStudentName.setText(studentDTO.getName());
+                    lblAddress.setText(studentDTO.getAddress());
+                    lblContact.setText(studentDTO.getContact_no());
+                    lblGender.setText(studentDTO.getGender());
+                    lblEmail.setText(studentDTO.getEmail());
+                    lblUniversity.setText(studentDTO.getUniversity());
+                    lblRoomType.setText(roomType);
+                    lblRoomNo.setText(roomNo);
+
+                }else{
+
+
+                    StudentDTO studentDTO = studentBO.viewStudent(s_id.get(1));
+
+                    //Get the first part (first 7 characters)
+                    String roomType = roomId.substring(0, 7);
+
+                    // Get the second part (remaining characters)
+                    String roomNo = roomId.substring(7);
+
+                    lblStudentID.setText(studentDTO.getStudent_id());
+                    lblStudentName.setText(studentDTO.getName());
+                    lblAddress.setText(studentDTO.getAddress());
+                    lblContact.setText(studentDTO.getContact_no());
+                    lblGender.setText(studentDTO.getGender());
+                    lblEmail.setText(studentDTO.getEmail());
+                    lblUniversity.setText(studentDTO.getUniversity());
+                    lblRoomType.setText(roomType);
+                    lblRoomNo.setText(roomNo);
+                }
+            }else {
+                StudentDTO studentDTO = studentBO.viewStudent(s_id.get(0));
+
+                //Get the first part (first 7 characters)
+                String roomType = roomId.substring(0, 7);
+
+                // Get the second part (remaining characters)
+                String roomNo = roomId.substring(7);
+
+                lblStudentID.setText(studentDTO.getStudent_id());
+                lblStudentName.setText(studentDTO.getName());
+                lblAddress.setText(studentDTO.getAddress());
+                lblContact.setText(studentDTO.getContact_no());
+                lblGender.setText(studentDTO.getGender());
+                lblEmail.setText(studentDTO.getEmail());
+                lblUniversity.setText(studentDTO.getUniversity());
+                lblRoomType.setText(roomType);
+                lblRoomNo.setText(roomNo);
+            }
+
 
         } catch (SQLException | ClassNotFoundException | IOException e) {
             throw new RuntimeException(e);
@@ -342,7 +401,7 @@ public class RoomFormsController implements Initializable {
 
                 if (qty == 1) {
                     label.setDisable(false);
-                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black");
+                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black; -fx-text-fill: black");
                 } else if (qty == 2) {
                     label.setDisable(false);
                     label.setStyle("-fx-background-color: red; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: white");
@@ -363,7 +422,7 @@ public class RoomFormsController implements Initializable {
 
                 if (qty == 1) {
                     label.setDisable(false);
-                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black");
+                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black; -fx-text-fill: black");
                 } else if (qty == 2) {
                     label.setDisable(false);
                     label.setStyle("-fx-background-color: red; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: white");
@@ -386,7 +445,7 @@ public class RoomFormsController implements Initializable {
 
                 if (qty == 1) {
                     label.setDisable(false);
-                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black");
+                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black; -fx-text-fill: black");
                 } else if (qty == 2) {
                     label.setDisable(false);
                     label.setStyle("-fx-background-color: red; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: white");
@@ -410,7 +469,7 @@ public class RoomFormsController implements Initializable {
 
                 if (qty == 1) {
                     label.setDisable(false);
-                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black");
+                    label.setStyle("-fx-background-color: yellow; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: black; -fx-text-fill: black");
                 } else if (qty == 2) {
                     label.setDisable(false);
                     label.setStyle("-fx-background-color: red; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: white");
@@ -637,5 +696,16 @@ public class RoomFormsController implements Initializable {
 
         stage = (Stage) btnOk.getScene().getWindow();
         stage.close();
+
+    }
+
+    public void loadMainDashboard(MouseEvent mouseEvent) throws IOException {
+
+        stage = (Stage) imglogOut.getScene().getWindow();
+        stage.close();
+
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/main_dashboard_d24.fxml"))));
+        stage.centerOnScreen();
+        stage.show();
     }
 }

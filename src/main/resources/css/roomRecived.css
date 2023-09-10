@@ -1,0 +1,11 @@
+.available1 {
+    -fx-background-color: yello; /* Set the background color for available rooms */
+    -fx-border-radius: 20px;
+    -fx-alignment: center;
+}
+
+.occupied {
+    -fx-background-color: red; /* Set the background color for occupied rooms */
+    -fx-border-radius: 20px;
+    -fx-alignment: center;
+}

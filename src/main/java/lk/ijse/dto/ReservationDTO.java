@@ -15,6 +15,7 @@ import java.util.Date;
 @Setter
 
 public class ReservationDTO {
+
     private String res_id;
     private LocalDate date;
     private String status;

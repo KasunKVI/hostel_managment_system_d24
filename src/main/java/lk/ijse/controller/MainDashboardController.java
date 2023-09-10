@@ -2,15 +2,15 @@ package lk.ijse.controller;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -20,6 +20,9 @@ import lk.ijse.bo.SuperBO;
 import lk.ijse.bo.custom.ReservationBO;
 import lk.ijse.bo.custom.RoomBO;
 import lk.ijse.bo.custom.StudentBO;
+import lk.ijse.dto.ReservationDTO;
+import lk.ijse.dto.RoomDTO;
+import lk.ijse.dto.StudentDTO;
 import org.hibernate.type.descriptor.DateTimeUtils;
 
 import java.io.IOException;
@@ -30,6 +33,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainDashboardController implements Initializable {
@@ -51,6 +55,8 @@ public class MainDashboardController implements Initializable {
     @FXML
     private Button btn3;
     @FXML
+    private Button btnReservation;
+    @FXML
     private AnchorPane back_pane;
     @FXML
     private Label lbl_total_Income;
@@ -60,6 +66,23 @@ public class MainDashboardController implements Initializable {
     private PieChart rooms_received_with_types;
     @FXML
     private ProgressBar student_capacity;
+    @FXML
+    private ComboBox<Integer> cmbRoomNo;
+    @FXML
+    private ComboBox<String> cmbRoomType;
+    @FXML
+    private ComboBox<String> cmbStudentID;
+    @FXML
+    private ToggleGroup keyMoneyTime;
+    @FXML
+    private RadioButton rbtnLater;
+    @FXML
+    private RadioButton rbtnNow;
+    @FXML
+    private TextField txtRoomQty;
+
+    public static int qty = 0;
+
 
     Stage stage= new Stage();
     private static int number = 0;
@@ -78,7 +101,7 @@ public class MainDashboardController implements Initializable {
     }
 
     public void loadHomePage(ActionEvent actionEvent) throws IOException {
-        number = 0;
+        number = 3;
         content_pane.getChildren().clear();
         content_pane.getChildren().add(FXMLLoader.load(getClass().getResource("/view/copy_home_page_d24.fxml")));
     }
@@ -103,16 +126,43 @@ public class MainDashboardController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        if (number==1) {
+        if (number==0) {
+            loadTimeAndDate();
 
-
-        } else if (number==0) {
+        }
+        if (number==0||number==3) {
             updateProgressBar();
             initializePieChart();
-            loadTimeAndDate();
+
             getReservationCount();
         }
+        if (number==4){
+            initializeComboBoxStudent();
+            initializeComboBoxRoomTypes();
+        }
 
+    }
+
+    private void initializeComboBoxRoomTypes() {
+
+        cmbRoomType.getItems().addAll("RM_1324", "RM_5467", "RM_7896", "RM_0093");
+
+    }
+
+    private void initializeComboBoxStudent() {
+
+        try {
+            ObservableList<String> obList = FXCollections.observableArrayList();
+            List<StudentDTO> studentDTOS = studentBO.getAllStudents();
+
+            for (StudentDTO studentDTO : studentDTOS){
+                obList.add(studentDTO.getStudent_id());
+            }
+
+            cmbStudentID.setItems(obList);
+        } catch (SQLException | ClassNotFoundException | IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void getReservationCount() {
@@ -123,7 +173,7 @@ public class MainDashboardController implements Initializable {
         }
     }
 
-    private void initializePieChart() {
+    private void initializePieChart(){
 
         try {
             rooms_received_with_types.getData().add(new PieChart.Data("RM-0093",roomBO.RM0093Count()));
@@ -140,7 +190,7 @@ public class MainDashboardController implements Initializable {
         try {
 
             int count = studentBO.getStudentCount();
-            student_capacity.setProgress((double) count /175);
+            student_capacity.setProgress((double) count /158);
 
         } catch (SQLException | IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -168,6 +218,135 @@ public class MainDashboardController implements Initializable {
             timeline.setCycleCount(Timeline.INDEFINITE);
             timeline.play();
         }
+
+    }
+
+    public void loadAddReservationForm(ActionEvent actionEvent) {
+
+        number=4;
+
+        content_pane.setDisable(true);
+
+
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/addReservation.fxml"))));
+            stage.centerOnScreen();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        stage.setOnHidden(event1 -> {
+            content_pane.setDisable(false);
+        });
+
+        stage.show();
+    }
+
+    public void addReservation(ActionEvent event) {
+
+        try {
+            StudentRegistrationController.res_id=reservationBO.getLatestResId();
+        } catch (SQLException | ClassNotFoundException | IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        StudentRegistrationController.generateResId();
+        RadioButton selectedRadioButton = (RadioButton)keyMoneyTime.getSelectedToggle();
+        String room_type_id = cmbRoomType.getSelectionModel().getSelectedItem()+cmbRoomNo.getSelectionModel().getSelectedItem();
+        RoomDTO roomDTO = new RoomDTO();
+        roomDTO.setRoom_type_id(room_type_id);
+        roomDTO.setKey_money(selectedRadioButton.getText());
+        roomDTO.setType(cmbRoomType.getSelectionModel().getSelectedItem());
+
+
+        try {
+            int qt = roomBO.getRoomResQty(room_type_id);
+
+            if (qt==2){
+                qty = 0;
+            } else if (qt==1){
+                qty =2;
+            } else {
+                qty = 1;
+            }
+
+        } catch (SQLException | ClassNotFoundException | IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        roomDTO.setQty(qty);
+        StudentDTO studentDTO = new StudentDTO();
+        studentDTO.setStudent_id(cmbStudentID.getSelectionModel().getSelectedItem());
+
+        ReservationDTO reservationDTO = new ReservationDTO();
+        reservationDTO.setRes_id(StudentRegistrationController.res_id);
+        reservationDTO.setDate(LocalDate.now());
+        reservationDTO.setStatus(selectedRadioButton.getText());
+        reservationDTO.setRoom(roomDTO);
+        reservationDTO.setStudent(studentDTO);
+
+        boolean b1 = reservationBO.addNewReservationWithRoom(reservationDTO,roomDTO,room_type_id);
+
+        if(b1){
+            new Alert(Alert.AlertType.CONFIRMATION, "Reservation Add Successfully").show();
+        }else {
+            new Alert(Alert.AlertType.ERROR, "Something Error Please Try Again").show();
+        }
+    }
+
+    public void loadRoomNoBox(ActionEvent actionEvent) {
+
+
+
+        String type = cmbRoomType.getSelectionModel().getSelectedItem();
+
+        System.out.println(type);
+        int i = 0;
+
+        if (type.equals("RM_1324")){
+
+            i=35;
+
+        }else if (type.equals("RM_5467")){
+
+            i=20;
+
+        }else if (type.equals("RM_7896")){
+
+            i=14;
+
+        }else if (type.equals("RM_0093")){
+
+            i=10;
+
+        }
+
+        ObservableList<Integer> ids = FXCollections.observableArrayList();
+        for (int j = 0; j<i; j++){
+            ids.add(j+1);
+        }
+        cmbRoomNo.setItems(ids);
+    }
+
+    public void changePassword(MouseEvent mouseEvent) {
+
+        content_pane.setDisable(true);
+
+
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/passwordResetForm.fxml"))));
+            stage.centerOnScreen();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        stage.setOnHidden(event1 -> {
+            content_pane.setDisable(false);
+        });
+
+        stage.show();
 
     }
 }

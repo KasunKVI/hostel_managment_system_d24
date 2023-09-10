@@ -451,12 +451,12 @@ public class LogInFormController {
 
     public void checkPassValid(KeyEvent keyEvent) {
 
-        if (!txtVisiblePass.getText().matches(Regex.password())){
-            condition=false;
-            FontChanger.setTextColorRedLogIn(txtVisiblePass);
-        }else {
-            condition=true;
-            FontChanger.setTextBlackLogIn(txtVisiblePass);
-        }
+//        if (!txtVisiblePass.getText().matches(Regex.password())){
+//            condition=false;
+//            FontChanger.setTextColorRedLogIn(txtVisiblePass);
+//        }else {
+//            condition=true;
+//            FontChanger.setTextBlackLogIn(txtVisiblePass);
+//        }
     }
 }

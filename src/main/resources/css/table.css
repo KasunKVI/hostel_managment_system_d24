@@ -1,0 +1,37 @@
+/* Style the TableView */
+.table-view {
+    -fx-background-color: #f0f0f0; /* Background color of the table */
+}
+
+/* Style the table header */
+.table-view .column-header-background {
+    -fx-background-color: #007acc; /* Header background color */
+}
+
+.table-view .column-header {
+    -fx-background-color: #007acc; /* Header background color */
+    -fx-text-fill: white; /* Header text color */
+}
+
+/* Style alternating rows */
+.table-row-cell:odd {
+    -fx-background-color: #e0e0e0; /* Background color of odd rows */
+}
+
+/* Style cell text */
+.table-cell {
+    -fx-text-fill: #333; /* Text color in cells */
+}
+
+/* Style selected rows */
+.table-row-cell:selected {
+    -fx-background-color: #007acc; /* Background color of selected rows */
+    -fx-text-fill: white; /* Text color in selected rows */
+}
+
+/* Style focused cell */
+.table-cell:focused {
+    -fx-background-color: #cce8ff; /* Background color of focused cell */
+    -fx-border-color: #007acc; /* Border color of focused cell */
+    -fx-border-width: 1; /* Border width of focused cell */
+}

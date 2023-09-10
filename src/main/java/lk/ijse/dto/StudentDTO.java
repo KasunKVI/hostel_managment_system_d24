@@ -1,17 +1,18 @@
 package lk.ijse.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lk.ijse.entity.Reservation;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 
 public class StudentDTO {
 
@@ -23,5 +24,6 @@ public class StudentDTO {
     private String gender;
     private String university;
     private String email;
+    private List<ReservationDTO> reservations = new ArrayList<>();
 
 }

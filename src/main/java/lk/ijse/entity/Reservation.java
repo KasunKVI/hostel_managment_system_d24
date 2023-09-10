@@ -22,12 +22,10 @@ public class Reservation {
     private LocalDate date;
     private String status;
 
-    @JoinColumn(name = "student_id")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private Student student;
 
-    @JoinColumn(name = "room_type_id")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private Room room;
 
 }

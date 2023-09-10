@@ -45,6 +45,13 @@
     -fx-border-radius: 12px;
     -fx-border-width: 2px;
 }
+.resbtn{
+    -fx-background-color: #2C3A47;
+    -fx-border-color: yellow;
+    -fx-text-fill: yellow;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+}
 .current_capacity_pane,.pie_chart_pane{
     -fx-background-radius: 20px;
     -fx-background-color: 	#030303;

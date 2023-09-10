@@ -73,7 +73,7 @@
                         <Font name="FreeSans" size="21.0" />
                      </font>
                   </Label>
-                  <Button fx:id="btn_key_money_list" layoutX="18.0" layoutY="103.0" mnemonicParsing="false" onAction="#show_key_money_remain_list" prefHeight="39.0" prefWidth="142.0" styleClass="btnKeyMoney" text="View List" />
+                  <Button fx:id="btn_key_money_list" layoutX="18.0" layoutY="103.0" mnemonicParsing="false" onAction="#show_key_money_remain_list" prefHeight="39.0" prefWidth="142.0" styleClass="btnKeyMoney" stylesheets="@../css/viewListBtn.css" text="View List" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="231.0" layoutY="30.0" prefHeight="163.0" prefWidth="180.0" styleClass="s_counts_pane">
@@ -83,8 +83,8 @@
                         <Font name="DejaVu Sans Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Button fx:id="btn_emergency" layoutX="18.0" layoutY="103.0" mnemonicParsing="false" onAction="#load_emergency_alert" prefHeight="39.0" prefWidth="142.0" styleClass="btnKeyMoney" text="Emergency" />
-                  <ImageView fitHeight="45.0" fitWidth="78.0" layoutX="58.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
+                  <Button fx:id="btn_emergency" layoutX="18.0" layoutY="103.0" mnemonicParsing="false" onAction="#load_emergency_alert" prefHeight="39.0" prefWidth="142.0" styleClass="btnEmergency" stylesheets="@../css/viewListBtn.css" text="Emergency" />
+                  <ImageView fitHeight="45.0" fitWidth="78.0" layoutX="63.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" styleClass="img">
                      <image>
                         <Image url="@../image/output-onlinegiftools.gif" />
                      </image>

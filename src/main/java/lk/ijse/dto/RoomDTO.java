@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,5 +18,5 @@ public class RoomDTO {
     private String type;
     private String key_money;
     private Integer qty;
-
+    private List<ReservationDTO> reservations = new ArrayList<>();
 }
