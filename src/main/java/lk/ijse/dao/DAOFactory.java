@@ -3,6 +3,7 @@ package lk.ijse.dao;
 import lk.ijse.dao.custom.impl.ReservationDAOImpl;
 import lk.ijse.dao.custom.impl.RoomDAOImpl;
 import lk.ijse.dao.custom.impl.StudentDAOImpl;
+import lk.ijse.dao.custom.impl.UserDAOImpl;
 
 public class DAOFactory {
 
@@ -28,6 +29,8 @@ public class DAOFactory {
                 return new StudentDAOImpl();
             case RESERVATION:
                 return new ReservationDAOImpl();
+            case USER:
+                return new UserDAOImpl();
             default:
                 return null;
         }
