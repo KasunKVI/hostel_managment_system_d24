@@ -16,7 +16,7 @@
             <Font name="DejaVu Sans Bold" size="28.0" />
          </font>
       </Label>
-      <TextField fx:id="txtStudentName" layoutX="35.0" layoutY="129.0" prefHeight="47.0" prefWidth="285.0" promptText="Name Of Student" styleClass="txt1">
+      <TextField fx:id="txtStudentName" layoutX="35.0" layoutY="129.0" onKeyReleased="#checkStudentName" prefHeight="47.0" prefWidth="285.0" promptText="Name Of Student" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
@@ -27,12 +27,12 @@
          </toggleGroup></RadioButton>
       <RadioButton fx:id="rbtnFemale" layoutX="426.0" layoutY="246.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="82.0" styleClass="gender" text="Female" toggleGroup="$Gendergroup" />
       <Label alignment="CENTER" layoutX="364.0" layoutY="121.0" prefHeight="47.0" prefWidth="151.0" styleClass="gender" text="Gender" />
-      <TextField fx:id="txtContactNumber" layoutX="39.0" layoutY="216.0" prefHeight="47.0" prefWidth="285.0" promptText="Contact Number" styleClass="txt1">
+      <TextField fx:id="txtContactNumber" layoutX="39.0" layoutY="216.0" onKeyReleased="#checkStudentContact" prefHeight="47.0" prefWidth="285.0" promptText="Contact Number" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtEmailAddress" layoutX="39.0" layoutY="305.0" prefHeight="47.0" prefWidth="228.0" promptText="Email Address" styleClass="txt1">
+      <TextField fx:id="txtEmailAddress" layoutX="39.0" layoutY="305.0" onKeyReleased="#checkStudentEmail" prefHeight="47.0" prefWidth="228.0" promptText="Email Address" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font name="DejaVu Sans Bold" size="21.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAddress" layoutX="43.0" layoutY="486.0" prefHeight="63.0" prefWidth="485.0" promptText="Address" styleClass="txt1">
+      <TextField fx:id="txtAddress" layoutX="43.0" layoutY="486.0" onKeyReleased="#CheckStudentAddress" prefHeight="63.0" prefWidth="485.0" promptText="Address" styleClass="txt1">
          <font>
             <Font name="DejaVu Serif Bold" size="13.0" />
          </font>
@@ -52,7 +52,7 @@
             <Font name="Comic Sans MS Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="86.0" layoutY="612.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" styleClass="close_btn" text="Close">
+      <Button fx:id="btnClose1" layoutX="86.0" layoutY="612.0" mnemonicParsing="false" onAction="#closeStudentForm1" prefHeight="47.0" prefWidth="131.0" styleClass="close_btn" text="Close">
          <font>
             <Font name="Comic Sans MS Bold" size="16.0" />
          </font>

@@ -24,7 +24,7 @@
         </Label>
         <Label fx:id="lblS_id" alignment="CENTER" layoutX="333.0" layoutY="136.0" prefHeight="47.0" prefWidth="192.0" styleClass="gender" text="Id" />
       <Label fx:id="lblSName" alignment="CENTER" layoutX="330.0" layoutY="230.0" prefHeight="47.0" prefWidth="224.0" styleClass="gender" text="Name" />
-      <Label fx:id="lblAddress" alignment="CENTER" layoutX="39.0" layoutY="298.0" prefHeight="47.0" prefWidth="291.0" styleClass="gender" text="Address" />
+      <Label fx:id="lblAddress" alignment="CENTER" layoutX="39.0" layoutY="298.0" prefHeight="47.0" prefWidth="483.0" styleClass="gender" text="Address" />
       <Label fx:id="lblGender" alignment="CENTER" layoutX="363.0" layoutY="376.0" prefHeight="47.0" prefWidth="173.0" styleClass="gender" text="Gender" />
       <Label fx:id="lblEmail" alignment="CENTER" layoutX="39.0" layoutY="230.0" prefHeight="47.0" prefWidth="270.0" styleClass="gender" text="Email" />
       <Label fx:id="lblUniName" alignment="CENTER" layoutX="42.0" layoutY="376.0" prefHeight="47.0" prefWidth="302.0" styleClass="gender" text="Uni Name" />

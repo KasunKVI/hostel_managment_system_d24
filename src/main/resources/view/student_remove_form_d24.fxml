@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="675.0" prefWidth="564.0" styleClass="background" stylesheets="@../css/studnet_remove_d24.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegistrationController">
     <children>
-        <Button layoutX="318.0" layoutY="610.0" mnemonicParsing="false" onAction="#removeStudent" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Remove">
+        <Button fx:id="btnremove" layoutX="318.0" layoutY="610.0" mnemonicParsing="false" onAction="#removeStudent" prefHeight="47.0" prefWidth="131.0" styleClass="proceed_btn" text="Remove">
             <font>
                 <Font name="Comic Sans MS Bold" size="16.0" />
             </font>
